@@ -1,7 +1,11 @@
-# simple-todo
-final year college assignment
+# TODO APP 2020
+DMA Final Assessment
 <p>This is a simple to-do app</p>
-<h3>Features of the App</h3>
+<h3>Introduction</h3>
+<p>This is Developing Mobile Application final assesment todo app. this app fullfilled all the requirement as per university provided requirement guide lines.</p>
+<h4>App Logo </h4>
+<img src="images/logo.JPG" width="100">
+<h3>Features of the TODO APP</h3>
 <h4>There is two types of to-do in this app one with orm and another without orm</h4>
 <p>Splash Screen</p>
 <p>login/sign-in page with validations</p>
