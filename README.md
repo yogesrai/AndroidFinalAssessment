@@ -4,7 +4,7 @@ DMA Final Assessment
 <h3>Introduction</h3>
 <p>This is Developing Mobile Application final assesment todo app. this app fullfilled all the requirement as per university provided requirement guide lines.</p>
 <h4>App Logo </h4>
-<img src="../images/logo.jpg" width="100" height="100">
+<img src="images/logo.JPG" width="100" height="100">
 <h3>Features of the TODO APP</h3>
 <h4>There is two types of to-do in this app one with orm and another without orm</h4>
 <p>Splash Screen</p>
