@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tasks.GetAllUsers"></activity>
-        <activity android:name=".tasks.FragmentTab" />
-        <activity android:name=".Recycle_View.DetailActivity" />
+        <activity android:name=".tasks.GetAllUsers" android:label="TO-DO ALL USERS">
+        </activity>
+        <activity android:name=".tasks.FragmentTab" android:label="TO-DO FRAGMENTS"/>
+        <activity android:name=".Recycle_View.DetailActivity"  />
         <activity android:name=".Recycle_View.recycle_view" />
         <activity android:name=".tasks.SignUp" />
-        <activity android:name=".tasks.Register" />
+        <activity android:name=".tasks.Register" android:label="TO-DO USER REGISTER"/>
         <activity
             android:name=".addedittask.AddEditTaskActivity"
             android:label="Add a new Task" />
