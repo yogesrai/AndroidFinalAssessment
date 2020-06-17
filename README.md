@@ -3,7 +3,11 @@ DMA Final Assessment
 <p>This is a simple to-do app</p>
 <h3>Introduction</h3>
 <p>This is Developing Mobile Application final assesment todo app. this app fullfilled all the requirement as per university provided requirement guide lines.
-this app is build by java and following by android architecture.</p>
+this app is build by java and following by android architecture. i.e ROOM AND MVVM. Room is an object relational mapping library (ORM).In other word Room will map our 
+database object to java object.room has three main component.i.e Entity,Dao,Database. entity define database table. Dao provide api for reading and writing data.
+Database represent database holder.Model-View_ViewModel(MVVM) the main role of mvvm in the software development process are View informs the inform the viewmodel 
+about the users action. view model handles the connection between view and model it is also equivalent to the controller or mediator of between view and model
+Data Model is the library of datasource. the view model works with data model for to get and set purpose.</p>
 <h4>App Logo </h4>
 <img src="images/logo.JPG" width="100" height="100">
 <h3>Features of the TODO APP</h3>
