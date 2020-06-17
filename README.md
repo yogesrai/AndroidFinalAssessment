@@ -9,8 +9,7 @@ this app is build by java and following by android architecture.</p>
 <h3>Features of the TODO APP</h3>
 <h4>Home Screee</h4>
 <p>Home screen dispalys list of task</P>
-<img src="images/one.JPG" width="100" height="100">
-![images](/images/one.JPG)
+<p><img src="images/one.JPG" width="100" height="100"></p>
 <h4>ADD TASK</h4>
 <p>Add task by clicking floating buttion having plus sign in the home screen </p>
 <img src="images/2.JPG" width="100" height="100">
