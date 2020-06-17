@@ -16,19 +16,25 @@ public class TaskEntry {
     private int priority;
     @ColumnInfo(name="updated_at")
     private Date updatedAt;
-
+    private String time;
+    private String title;
     @Ignore
-    public TaskEntry(String description, int priority, Date updatedAt) {
+    //this constructor is called when id is already created for e.g while inserting new data into table.
+    public TaskEntry(String description, int priority, Date updatedAt,String time,String title) {
         this.description = description;
         this.priority = priority;
         this.updatedAt = updatedAt;
+        this.time = time;
+        this.title = title;
     }
-
-    public TaskEntry(int id, String description, int priority, Date updatedAt) {
+    //<-- this contructor is called when id is already created for e.g while updating,etc.-->
+    public TaskEntry(int id, String description, int priority, Date updatedAt,String time,String title) {
         this.id = id;
         this.description = description;
         this.priority = priority;
         this.updatedAt = updatedAt;
+        this.time = time;
+        this.title = title;
     }
 
     public int getId() {
@@ -61,5 +67,14 @@ public class TaskEntry {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+    public String getTime() {  return time;}
+
+    public void setTime(String time) {this.time = time;
+    }
+    public String getTitle() {  return title;}
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

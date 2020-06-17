@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:id="@+id/logout"
+        android:title="Logout"/>
+    <item
+        android:id="@+id/menu2"
+        android:title="Register_User"/>
+    <item
+        android:id="@+id/menu3"
+        android:title="List of User"/>
+    <item
+        android:id="@+id/menu4"
+        android:title="Fragment"/>
+    <item
+        android:id="@+id/menu5"
+        android:title="Toast Message"/>
+    <item
+        android:id="@+id/menu7"
+        android:title="Implicit Intent"/>
+    <item
+        android:id="@+id/menu6"
+        android:title="Submenu">
+        <menu>
+            <item
+                android:id="@+id/submenu1"
+                android:title="submenu1"/>
+            <item
+                android:id="@+id/submenu2"
+                android:title="submenu2"/>
+        </menu>
+    </item>
+</menu>

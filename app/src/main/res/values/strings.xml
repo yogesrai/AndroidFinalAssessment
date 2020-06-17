@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">To-Do List</string>
+    <string name="app_name">To-Do Lists</string>
 
     <string name="main_activity_name">All Tasks</string>
     <string name="add_task_activity_name">Add a New Task</string>
@@ -19,5 +19,6 @@
     <string name="low_priority">Low</string>
 
     <string name="add_button">Add</string>
+    <string name="delete_button">Delete All</string>
     <string name="update_button">Update</string>
 </resources>

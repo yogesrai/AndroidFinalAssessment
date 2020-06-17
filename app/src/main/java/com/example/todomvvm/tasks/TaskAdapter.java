@@ -72,10 +72,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         String description = taskEntry.getDescription();
         int priority = taskEntry.getPriority();
         String updatedAt = dateFormat.format(taskEntry.getUpdatedAt());
+        String todo_date_time = "  -  "+ taskEntry.getTime();
+        String titl = taskEntry.getTitle();
 
         //Set values
+        holder.titleView.setText(titl);
         holder.taskDescriptionView.setText(description);
-        holder.updatedAtView.setText(updatedAt);
+        holder.updatedAtView.setText(updatedAt+todo_date_time);
 
         // Programmatically set the text and color for the priority TextView
         String priorityString = "" + priority; // converts int to String
@@ -85,6 +88,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         // Get the appropriate background color based on the priority
         int priorityColor = getPriorityColor(priority);
         priorityCircle.setColor(priorityColor);
+
     }
 
     /*
@@ -131,7 +135,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
      */
     public void setTasks(List<TaskEntry> taskEntries) {
         mTaskEntries = taskEntries;
-        notifyDataSetChanged();
+        notifyDataSetChanged(); //list lae reflect garxa
     }
 
     public interface ItemClickListener {
@@ -145,6 +149,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         TextView taskDescriptionView;
         TextView updatedAtView;
         TextView priorityView;
+        TextView titleView;
+
 
         /**
          * Constructor for the TaskViewHolders.
@@ -157,6 +163,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             taskDescriptionView = itemView.findViewById(R.id.taskDescription);
             updatedAtView = itemView.findViewById(R.id.taskUpdatedAt);
             priorityView = itemView.findViewById(R.id.priorityTextView);
+            titleView = itemView.findViewById(R.id.title);
             itemView.setOnClickListener(this);
         }
 

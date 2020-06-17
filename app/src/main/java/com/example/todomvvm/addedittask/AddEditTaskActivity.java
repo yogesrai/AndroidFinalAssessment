@@ -4,18 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TimePicker;
 
 import com.example.todomvvm.R;
 import com.example.todomvvm.database.AppDatabase;
 import com.example.todomvvm.database.Repository;
 import com.example.todomvvm.database.TaskEntry;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class AddEditTaskActivity extends AppCompatActivity {
@@ -33,7 +37,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
     // Constant for logging
     private static final String TAG = AddEditTaskActivity.class.getSimpleName();
     // Fields for views
-    EditText mEditText;
+    EditText mEditText,todo_time,title;
     RadioGroup mRadioGroup;
     Button mButton;
 
@@ -93,6 +97,27 @@ public class AddEditTaskActivity extends AppCompatActivity {
     private void initViews() {
         mEditText = findViewById(R.id.editTextTaskDescription);
         mRadioGroup = findViewById(R.id.radioGroup);
+        title = findViewById(R.id.title);
+        todo_time = findViewById(R.id.todo_time);
+        final Calendar myCalendar = Calendar.getInstance();
+        todo_time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar currentTime = Calendar.getInstance();
+                int hour = currentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = currentTime.get(Calendar.MINUTE);
+                TimePickerDialog timePicker;
+
+                timePicker = new TimePickerDialog(AddEditTaskActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        todo_time.setText(hourOfDay+":"+minute);
+                    }
+                }, hour, minute, false);
+                timePicker.setTitle("Choose Time:");
+                timePicker.show();
+            }
+        });
 
         mButton = findViewById(R.id.saveButton);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -101,11 +126,12 @@ public class AddEditTaskActivity extends AppCompatActivity {
                 onSaveButtonClicked();
             }
         });
+
     }
 
     /**
      * populateUI would be called to populate the UI when in update mode
-     *
+     *for update - to get data in textview field
      * @param task the taskEntry to populate the UI
      */
     private void populateUI(TaskEntry task) {
@@ -113,26 +139,29 @@ public class AddEditTaskActivity extends AppCompatActivity {
             return;
         }
         mEditText.setText(task.getDescription());
+        title.setText(task.getTitle());
+        todo_time.setText(task.getTime());
         setPriorityInViews(task.getPriority());
-
     }
 
     /**
+     * for Save New Date
      * onSaveButtonClicked is called when the "save" button is clicked.
      * It retrieves user input and inserts that new task data into the underlying database.
      */
     public void onSaveButtonClicked() {
         // Not yet implemented
         String description = mEditText.getText().toString();
+        String titles = title.getText().toString();
         int priority = getPriorityFromViews();
         Date date = new Date();
-        TaskEntry todo = new TaskEntry(description, priority, date);
+        String todotime = todo_time.getText().toString();
+        TaskEntry todo = new TaskEntry(description, priority, date,todotime,titles);
         if(mTaskId == DEFAULT_TASK_ID)
             viewModel.insertTask(todo);
         else{
             todo.setId(mTaskId);
             viewModel.updateTask(todo);
-
         }
         finish();
 

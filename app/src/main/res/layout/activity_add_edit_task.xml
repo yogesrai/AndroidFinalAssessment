@@ -13,7 +13,29 @@
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title:" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Title"
+        android:paddingBottom="@dimen/activity_horizontal_margin" />
     <!-- EditText for getttaskEntrytask description input -->
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description:" />
     <EditText
         android:id="@+id/editTextTaskDescription"
         android:layout_width="match_parent"
@@ -22,6 +44,23 @@
         android:hint="@string/edit_task_description"
         android:paddingBottom="@dimen/activity_horizontal_margin" />
 
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Todo Time" />
+
+    <EditText
+        android:id="@+id/todo_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:hint="Todo Time"
+        android:text="" />
     <!-- TextView and FrameLayout (which contains buttons) for Priority Selection -->
     <TextView
         style="@style/TextAppearance.AppCompat.Medium"
@@ -32,6 +71,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/priority_string"
         android:textColor="@android:color/primary_text_light" />
+
 
     <!-- RadioGroup for visible selection of a priority -->
     <RadioGroup
