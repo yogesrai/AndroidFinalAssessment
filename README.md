@@ -12,29 +12,29 @@ this app is build by java and following by android architecture.</p>
 <p><img src="images/one_one.JPG" ></p>
 <h4>ADD TASK</h4>
 <p>Add task by clicking floating buttion having plus sign in the home screen </p>
-<img src="images/2.JPG" width="100" height="100">
+<img src="images/2.JPG">
 <h4>UPDATE TASK</h4>
 <p>Update task by clicking double to the list data in the home scren list of task.</p>
-<img src="images/3.JPG" width="100" height="100">
+<img src="images/3.JPG">
 <h4>Delete Task</h4>
 <p>Delete task by swiping the list task from the home screen.</p>
-<img src="images/1.JPG" width="100" height="100">
+<img src="images/1.JPG">
 <h4>Add users</h4>
 <p>Add users by clicking Register_user menu.</p>
-<img src="images/4.JPG" width="100" height="100">
-<img src="images/5.JPG" width="100" height="100">
+<img src="images/4.JPG">
+<img src="images/5.JPG">
 <h4>LIST OF USER</h4>
 <p>List of users display all user info.</p>
-<img src="images/5.JPG" width="100" height="100">
+<img src="images/5.JPG">
 <h4>DELETE USERS</h4>
 <p>Delete usre by swaping the list user specifically from the list of users.</p>
-<img src="images/5.JPG" width="100" height="100">
+<img src="images/5.JPG">
 <h4>UPDATE USERES</h4>
 <p>Update user by double clicking the user data.</p>
-<img src="images/7.JPG" width="100" height="100">
+<img src="images/7.JPG">
 <h4>FRAGEMENT Tab</h4>
 <p>Fragement tab dispaly task resgister and user register according to tab wise.</p>
-<img src="images/8.JPG" width="100" height="100">
+<img src="images/8.JPG">
 <h4>Toast Message</h4>
 <p>Toast Message display a short time viewable message.</p>
 <h4>IMPLICIT INTENT</h4>
